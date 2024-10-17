@@ -1,0 +1,61 @@
+# Archivos y directorios de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Archivos de entorno virtual de Python
+venv/
+env/
+*.env
+.Python
+
+# Archivos de configuración específicos de entornos de desarrollo
+.vscode/
+.idea/
+*.swp
+
+# Archivos de logs
+*.log
+*.txt
+*.out
+
+# Archivos de base de datos local
+*.sqlite3
+*.db
+
+# Archivos de control de versiones y configuraciones del sistema
+.git/
+*.orig
+*.lock
+
+# Archivos de distribución
+wheelhouse/
+*.whl
+
+# Archivos de caché de pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Configuración específica de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos generados por pytest
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Archivos generados por herramientas de pruebas de cobertura
+htmlcov/
+.tox/
+
+*.pem
