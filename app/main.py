@@ -4,7 +4,10 @@ from database import init_db
 from routes import numbers_routes
 from routes import words_routes
 
-app = FastAPI()
+app = FastAPI(
+    title="Randoom",
+    description="Human Random Generator as a service"
+)
 
 init_db()
 
