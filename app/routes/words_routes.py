@@ -60,7 +60,10 @@ def post_random_word(
         validate_language(lang)
         
     words_handler.insert(conn, word, lang)
-    return {"message": "Word saved successfully!", "word": word}
+    return {
+        "message": "Word saved successfully!",
+        "word": word
+    }
 
 @router.get("/", response_model=GetResponse, summary="Get a random word", description="Retrieve a random word from the database with optional language and length filters.")
 def get_random_word(
@@ -73,7 +76,10 @@ def get_random_word(
         validate_language(lang)
         
     result = words_handler.get_random(conn, lang, min_length, max_length)
-    return {"word": result["value"], "lang": result["lang"]}
+    return {
+        "word": result["value"],
+        "lang": result["lang"]
+    }
 
 @router.get("/stats/", response_model=StatsResponse, summary="Get statistics of words", description="Retrieve statistics including total count, min, max, avg length, and top items.")
 def get_word_stats(conn: Connection = Depends(get_db_connection)):
