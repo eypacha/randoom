@@ -6,7 +6,7 @@ from routes import words_routes
 
 app = FastAPI(
     title="Randoom",
-    summary="Human Random Generator as a service",
+    description="Human Random Generator as a service",
     openapi_tags=[
         { "name": "numbers", "description": "Operations with numbers"},
         { "name": "words", "description": "Operations with words"},
