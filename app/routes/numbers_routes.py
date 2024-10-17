@@ -3,7 +3,10 @@ from models.random_numbers import RandomNumbers
 from database import get_db_connection
 from sqlite3 import Connection
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/random/number",
+    tags=["numbers"],
+)
 
 numbers_handler = RandomNumbers()
 

@@ -4,7 +4,10 @@ from database import get_db_connection
 from sqlite3 import Connection
 from pydantic import BaseModel
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/random/word",
+    tags=["words"]
+)
 
 class PostResponse(BaseModel):
     message: str

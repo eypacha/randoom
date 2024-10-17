@@ -6,10 +6,14 @@ from routes import words_routes
 
 app = FastAPI(
     title="Randoom",
-    description="Human Random Generator as a service"
+    summary="Human Random Generator as a service",
+    openapi_tags=[
+        { "name": "numbers", "description": "Operations with numbers"},
+        { "name": "words", "description": "Operations with words"},
+    ]
 )
 
 init_db()
 
-app.include_router(numbers_routes, prefix="/random/number", tags=["numbers"])
-app.include_router(words_routes, prefix="/random/word", tags=["words"])
+app.include_router(numbers_routes)
+app.include_router(words_routes)
